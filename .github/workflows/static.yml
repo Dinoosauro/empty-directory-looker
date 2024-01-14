@@ -30,12 +30,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Reinstall dependency (for safety)
-        run: npm i
-      - name: Create dist directory
+        uses: actions/configure-pages@v3
+      - name: Minify build
         run: node webBuild.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
@@ -44,4 +42,4 @@ jobs:
           path: 'dist'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
