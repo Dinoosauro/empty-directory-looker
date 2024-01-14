@@ -1,0 +1,140 @@
+:root {
+    --background: #151515;
+    --text: #f0f0f0;
+    --second: #303030;
+    --table: #515151;
+    --accent: #139269;
+    --hover: 150%;
+    --active: 175%;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    color: var(--text);
+    background-color: var(--background);
+    padding: 15px;
+}
+
+table>tbody>tr>* {
+    padding: 10px;
+    border-radius: 8px;
+}
+
+table>tbody>tr {
+    background-color: var(--table);
+    border-radius: 8px;
+}
+
+a {
+    color: var(--text);
+    text-decoration: underline;
+}
+
+.secondContainer {
+    padding: 10px;
+    background-color: var(--second);
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    background-color: var(--accent);
+    border-radius: 8px;
+    padding: 10px;
+    font-family: 'Work Sans', sans-serif;
+    color: var(--text);
+    border: 1px solid var(--text);
+    transition: filter 0.15s ease-in-out
+}
+
+button:hover {
+    cursor: pointer;
+    filter: brightness(var(--hover));
+}
+
+button:active {
+    filter: brightness(var(--active));
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.marginChild>* {
+    margin-right: 10px;
+}
+
+td {
+    text-align: center;
+}
+
+#notSupportedError {
+    background-color: darkred;
+    padding: 15px;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    border-radius: 8px;
+    margin-bottom: 21px;
+    display: none;
+}
+[disabled] {
+    opacity: 0.6;
+}
+.deleteText {
+    display: block;
+    text-decoration: underline;
+}
+.deleteAnimation {
+    animation-name: deleteAnimation;
+    animation-duration: 0.55s;
+    animation-iteration-count: infinite;
+}
+@keyframes deleteAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    40% {
+        transform: rotate(-3deg);
+    }
+    66% {
+        transform: rotate(15deg);
+    }
+    85% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: var(--background);
+    margin: 5px;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    border: 2px solid var(--accent);
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: var(--accent);
+  }
+  input[type="checkbox"]:checked:after {
+    content: '';
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M20.285 6.289a1 1 0 0 0-1.414 0l-11.36 11.36-4.95-4.95a1 1 0 1 0-1.414 1.414l5.657 5.657a1 1 0 0 0 1.414 0l12.067-12.067a1 1 0 0 0 0-1.414z"/></svg>') no-repeat center center;
+    background-size: contain;
+  }

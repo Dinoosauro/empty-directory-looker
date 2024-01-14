@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Empty Directory Look</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./assets/icon.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#151515" />
+    <meta name="theme-color" content="#2c4961" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div style="display: flex; align-items: center;">
+        <img width="72" height="72" id="icon" style="margin-right: 10px;">
+        <h1>Empty Directory Look</h1>
+    </div>
+    <i>Show the directories that contain some files and aren't empty</i><br><br>
+    <div id="notSupportedError">
+        <h2>Your browser is not supported 🫠</h2>
+        <l>This website uses Chromium's File System API to delete empty folders. Switch to a Chromium-based browser to delete them, or continue with your current browser to browse a chosen folder path and export it in a table..</l>
+        <br><br>
+    </div>
+    <div style="display: flex; align-items: center;">
+        <input type="checkbox" id="deleteMode" autocomplete="off"><label for="deleteMode">Enable folder delete mode (also by pressing Shift)</label>
+    </div><br><br>
+    <button id="itemSelect">Select items</button><br><br>
+    <div class="secondContainer">
+        <div style="display: flex;">
+            <button id="export" style="margin-right: 5px;">Export as a CSV table</button><br>
+            <button id="deleteEmpty" style="margin-left: 5px;">Delete empty folders</button><br>
+        </div><br><br>
+        <div style="overflow: auto;">
+            <table style="width: 100%; border-collapse: separate; border-spacing: 4px;">
+                <tbody id="addValue">
+                    <tr>
+                        <th>Folder name:</th>
+                        <th>Number of files found:</th>
+                        <th>Files:</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <a download="FolderEmpty.csv" id="downloadCsv" style="display: none;">Retry download</a>
+    </div><br><br>
+    <div class="marginChild">
+        <a id="noAnimations">Reduce animations</a>
+        <a id="changeTheme">Change
+            theme</a><a href="https://github.com/Dinoosauro/empty-directory-look">View on GitHub</a>
+    </div><br><br>
+    <i>Empty Directory Look – Version <span id="version">1.0.0</span> – Icon created by Bing Image Creator</i>
+    <script src="./script.js"></script>
+</body>
